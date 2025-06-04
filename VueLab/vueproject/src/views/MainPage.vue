@@ -1,7 +1,10 @@
 <template>
   <div class="main-page">
     <header class="header">
-      <div class="app-title">Моя Панель</div>
+      <div class="logo">
+        <img src="D:\repos\GoalTracker\VueLab\vueproject\src\logo.png" alt="Logo"/>
+        <div class="app-title">Goal Tracker</div>
+      </div>
       <div class="user-info">
         <span>{{ email || 'Пользователь' }}</span>
         <button class="logout-button" @click="logout">Выйти</button>
@@ -66,8 +69,8 @@
 
             <select v-model="filterDeadline" class="filter-select">
               <option value="">Любая дата</option>
+              <option value="overdue">Прошедшие</option>
               <option value="today">Сегодня</option>
-              <option value="overdue">Просроченные</option>
               <option value="upcoming">Будущие</option>
             </select>
           </div>
@@ -310,6 +313,7 @@ onMounted(async () => {
     toast.error('Пожалуйста, войдите в систему');
     return;
   }
+    // themeStore.loadTheme(authStore.idThemeSet);
 
   try {
     await loadGoals();
@@ -425,7 +429,7 @@ function editGoal(task) {
     deadline: task.deadline ? task.deadline.slice(0, 16) : null, // датa  в формате YYYY-MM-DDTHH:mm
     autoImportance: task.autoImportance || false,
     idUser: task.idUser,
-    startDate: task.startDate || new Date().toISOString() // сохраняем дату создания, если есть
+    startDate: task.startDate || getLocalISOTime(new Date()) // сохраняем дату создания, если есть
   };
   showGoalModal.value = true;
 }
@@ -521,9 +525,26 @@ async function confirmDelete(userId, taskId) {
   });
 }
 
+function getLocalISOTime(date) {
+  const pad = (n) => n < 10 ? '0' + n : n;
+
+  const YYYY = date.getFullYear();
+  const MM = pad(date.getMonth() + 1);
+  const DD = pad(date.getDate());
+  const hh = pad(date.getHours());
+  const mm = pad(date.getMinutes());
+  const ss = pad(date.getSeconds());
+
+  return `${YYYY}-${MM}-${DD}T${hh}:${mm}:${ss}`;
+}
+
 async function saveGoal() {
   if (!goalForm.value.title || !goalForm.value.status) {
     message.error('Заполните, пожалуйста, поля: название и статус.');
+    return;
+  }
+  else if (!goalForm.value.important && !goalForm.value.autoImportance) {
+    message.error('Заполните, пожалуйста, поля: приоритет или автоназначение приоритета.');
     return;
   }
 
@@ -538,13 +559,14 @@ async function saveGoal() {
         idStatus: goalForm.value.status,
         idImportance: goalForm.value.important || null, // если приоритет не задан, то null
         punishment: goalForm.value.punishment,
-        deadline: goalForm.value.deadline ? new Date(goalForm.value.deadline).toISOString() : null,
+        deadline: goalForm.value.deadline ? getLocalISOTime(new Date(goalForm.value.deadline)) : null,
         autoImportance: goalForm.value.autoImportance,
         idUser: goalForm.value.idUser,
         sendEmail: goalForm.value.sendEmail || [], // сохраняем напоминания, если есть
-        startDate: goalForm.value.startDate || new Date().toISOString(), // сохраняем дату создания, если есть
+        startDate: goalForm.value.startDate || getLocalISOTime(new Date())
 
       };
+      console.log('updated:', updated);
       const response = await fetchUpdateGoal(updated);
       console.log(response, "Ответ от API при обновлении цели");
       // Обновляем в списке локально
@@ -558,28 +580,30 @@ async function saveGoal() {
           important: response.idImportance,
           punishment: goalForm.value.punishment,
           deadline: goalForm.value.deadline
-            ? new Date(goalForm.value.deadline).toISOString()
+            ? getLocalISOTime(new Date(goalForm.value.deadline))
             : null,
           autoImportance: goalForm.value.autoImportance
         };
       }
       toast.success('Задача успешно обновлена');
     } else {
+      console.log('goalForm.value.important:', goalForm.value.important);
+      // console.log('goalForm.value:', goalForm.value);
       // Создание новой цели
       const toCreate = {
-        id: crypto.randomUUID(), // Генерируем уникальный ID
+        id: crypto.randomUUID(),
         title: goalForm.value.title,
         description: goalForm.value.description,
         idStatus: goalForm.value.status,
         idImportance: goalForm.value.important,
         punishment: goalForm.value.punishment,
-        deadline: goalForm.value.deadline ? new Date(goalForm.value.deadline).toISOString() : null,
-        AutoImportance: goalForm.value.autoImportance,
+        deadline: goalForm.value.deadline ? getLocalISOTime(new Date(goalForm.value.deadline)) : null,
+        AutoImportance: goalForm.value.autoImportance || false,
         idUser: authStore.idUser,
-        startDate: new Date().toISOString(), // Добавляем дату создания
-        sendEmail: [] // Изначально пустой массив напоминаний
+        startDate: getLocalISOTime(new Date()),
+        sendEmail: []
       };
-      console.log('Создание цели:', toCreate);
+      await console.log('Создание цели:', toCreate);
       const createdTask = await fetchCreateGoal(toCreate);
       console.log('Созданная задача:', createdTask);
       // Добавляем в локальный список (при условии, что API вернул новый объект с id)
@@ -715,8 +739,8 @@ const filteredTasks = computed(() => {
       (filterReminders.value === '1' && reminderCount === 1) ||
       (filterReminders.value === 'more' && reminderCount > 1);
 
-    const now = new Date();
-    const deadlineDate = task.deadline ? new Date(task.deadline) : null;
+    const now = getLocalISOTime(new Date());
+    const deadlineDate = task.deadline ? getLocalISOTime(new Date(task.deadline)) : null;
     const matchesDeadline =
       !filterDeadline.value ||
       (filterDeadline.value === 'today' &&
@@ -734,6 +758,7 @@ const filteredTasks = computed(() => {
     );
   });
 });
+
 </script>
 
 <style scoped>
@@ -836,6 +861,7 @@ const filteredTasks = computed(() => {
 .main-content {
   flex: 1;
   padding: 2rem;
+  padding-top: 1rem;
   background-color: var(--color-background);
   overflow-y: auto;
   width: 100%;
@@ -1166,7 +1192,25 @@ const filteredTasks = computed(() => {
   padding-left: 0;
   max-height: 200px;
   overflow-y: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; 
+}
+
+.reminder-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.reminder-list::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 4px;
+}
+
+.reminder-list::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.reminder-list::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
 }
 
 .reminder-list button {
@@ -1282,6 +1326,9 @@ const filteredTasks = computed(() => {
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  background-color: var(--color-background-mute);
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .filter-input,
@@ -1330,5 +1377,27 @@ const filteredTasks = computed(() => {
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.5rem;
+}
+
+.logo{
+  /* width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-background-soft); */
+  display: flex;
+  flex-direction: row;
+}
+
+.logo img{
+  width: 50px;
+  height: 50px;
+  /* padding-right: 1rem; */
+}
+
+.logo div {
+  /* font-size: 1.5rem; */
+  color: var(--color-heading);
+  /* margin: 10px; */
+  padding: 0.4rem 0 0 1rem;
 }
 </style>

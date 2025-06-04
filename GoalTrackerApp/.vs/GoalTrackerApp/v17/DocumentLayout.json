@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\repos\\GoalTracker\\GoalTrackerApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\goaltrackerapp\\controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|solutionrelative:goaltrackerapp\\controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CF93A51-2811-4AAF-8ED6-FDDC9BF10479}|EmailSender\\EmailSender.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\emailsender\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CF93A51-2811-4AAF-8ED6-FDDC9BF10479}|EmailSender\\EmailSender.csproj|solutionrelative:emailsender\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\services\\goalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\goalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\services\\interfaces\\igoalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\interfaces\\igoalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\goalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\goalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\interfaces\\igoalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\igoalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\interfaces\\igoalemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\igoalemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\sendemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,16 +35,36 @@
       "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\sendemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CF93A51-2811-4AAF-8ED6-FDDC9BF10479}|EmailSender\\EmailSender.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\emailsender\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CF93A51-2811-4AAF-8ED6-FDDC9BF10479}|EmailSender\\EmailSender.csproj|solutionrelative:emailsender\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\services\\interfaces\\isendemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\interfaces\\isendemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\goalemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\goalemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CF93A51-2811-4AAF-8ED6-FDDC9BF10479}|EmailSender\\EmailSender.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\emailsender\\emailoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CF93A51-2811-4AAF-8ED6-FDDC9BF10479}|EmailSender\\EmailSender.csproj|solutionrelative:emailsender\\emailoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\goaltrackerapp\\controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|solutionrelative:goaltrackerapp\\controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\services\\importanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\importanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\goaltrackerapp\\controllers\\importancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|solutionrelative:goaltrackerapp\\controllers\\importancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\services\\statusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\statusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\goalemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\goalemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\importancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\goaltrackerapp\\extensions\\apiextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|solutionrelative:goaltrackerapp\\extensions\\apiextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CF93A51-2811-4AAF-8ED6-FDDC9BF10479}|EmailSender\\EmailSender.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\emailsender\\emailoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CF93A51-2811-4AAF-8ED6-FDDC9BF10479}|EmailSender\\EmailSender.csproj|solutionrelative:emailsender\\emailoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9148FEA5-B773-46BE-9AB5-EBEBCD0E89F0}|JWT\\JWT.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\jwt\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -127,10 +151,6 @@
       "RelativeMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|solutionrelative:goaltrackerapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\services\\interfaces\\isendemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\interfaces\\isendemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\services\\interfaces\\igoalemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\interfaces\\igoalemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -153,14 +173,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\goaltrackerapp\\controllers\\themecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|solutionrelative:goaltrackerapp\\controllers\\themecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\interfaces\\igoalemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\igoalemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\interfaces\\igoalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\igoalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\repositories\\interfaces\\iimportancethemerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -203,16 +215,8 @@
       "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\themeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\services\\statusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\statusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\goaltrackerapp\\contracts\\themesetcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|solutionrelative:goaltrackerapp\\contracts\\themesetcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\goaltrackerapp\\controllers\\importancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96574A42-3F2C-4D50-80C4-81AFFF639E4C}|GoalTrackerApp\\GoalTrackerApp.csproj|solutionrelative:goaltrackerapp\\controllers\\importancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9148FEA5-B773-46BE-9AB5-EBEBCD0E89F0}|JWT\\JWT.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\jwt\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -257,10 +261,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9668D99C-5D32-4B4D-B43B-6834E5022FD1}|Core\\Core.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\core\\models\\thememodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9668D99C-5D32-4B4D-B43B-6834E5022FD1}|Core\\Core.csproj|solutionrelative:core\\models\\thememodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\services\\interfaces\\igoalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\services\\interfaces\\igoalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{679A7A4B-00E8-4A2A-ADD7-759C98890222}|DataAccess\\DataAccess.csproj|d:\\repos\\goaltracker\\goaltrackerapp\\dataaccess\\entities\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -338,7 +338,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 311,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -346,28 +346,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GoalController.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\GoalController.cs",
-              "RelativeDocumentMoniker": "GoalTrackerApp\\Controllers\\GoalController.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\GoalController.cs",
-              "RelativeToolTip": "GoalTrackerApp\\Controllers\\GoalController.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAgwH0AAAA4AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "GoalRepository.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\GoalRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\GoalRepository.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\GoalRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\GoalRepository.cs",
+              "ViewState": "AgIAAFEAAACAUWSrCUgvwF8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T12:17:15.887Z",
+              "WhenOpened": "2025-05-26T06:42:11.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "EmailSender.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\EmailSender\\EmailSender.cs",
-              "RelativeDocumentMoniker": "EmailSender\\EmailSender.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\EmailSender\\EmailSender.cs",
-              "RelativeToolTip": "EmailSender\\EmailSender.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAkwB8AAAAQAAAAAAAAAA==",
+              "Title": "SendEmailRepository.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\SendEmailRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\SendEmailRepository.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\SendEmailRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\SendEmailRepository.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAYwFsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:24:23.103Z",
+              "WhenOpened": "2025-05-26T07:02:32.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IGoalService.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\Interfaces\\IGoalService.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Services\\Interfaces\\IGoalService.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\Interfaces\\IGoalService.cs",
+              "RelativeToolTip": "DataAccess\\Services\\Interfaces\\IGoalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T04:47:28.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IGoalEmailRepository.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IGoalEmailRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IGoalEmailRepository.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IGoalEmailRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IGoalEmailRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T09:40:15.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IGoalRepository.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IGoalRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IGoalRepository.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IGoalRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IGoalRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T11:06:02.625Z",
               "EditorCaption": ""
             },
             {
@@ -378,53 +417,118 @@
               "RelativeDocumentMoniker": "DataAccess\\Services\\GoalService.cs",
               "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\GoalService.cs",
               "RelativeToolTip": "DataAccess\\Services\\GoalService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAkwC0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAUwEEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T15:36:48.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SendEmailRepository.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\SendEmailRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\SendEmailRepository.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\SendEmailRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\SendEmailRepository.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAYwF0AAAAMAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\EmailSender\\EmailSender.cs",
+              "RelativeDocumentMoniker": "EmailSender\\EmailSender.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\EmailSender\\EmailSender.cs",
+              "RelativeToolTip": "EmailSender\\EmailSender.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAiwFsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T07:02:32.592Z",
+              "WhenOpened": "2025-05-29T10:24:23.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SendEmailService.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\SendEmailService.cs",
               "RelativeDocumentMoniker": "DataAccess\\Services\\SendEmailService.cs",
               "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\SendEmailService.cs",
               "RelativeToolTip": "DataAccess\\Services\\SendEmailService.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAQwEQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAA6wEQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T09:27:37.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GoalRepository.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\GoalRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\GoalRepository.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\GoalRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\GoalRepository.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAkwD0AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "ISendEmailService.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\Interfaces\\ISendEmailService.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Services\\Interfaces\\ISendEmailService.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\Interfaces\\ISendEmailService.cs",
+              "RelativeToolTip": "DataAccess\\Services\\Interfaces\\ISendEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwA8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T06:42:11.35Z",
+              "WhenOpened": "2025-05-29T10:53:19.394Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
+              "Title": "EmailOptions.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\EmailSender\\EmailOptions.cs",
+              "RelativeDocumentMoniker": "EmailSender\\EmailOptions.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\EmailSender\\EmailOptions.cs",
+              "RelativeToolTip": "EmailSender\\EmailOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T16:51:23.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GoalController.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\GoalController.cs",
+              "RelativeDocumentMoniker": "GoalTrackerApp\\Controllers\\GoalController.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\GoalController.cs",
+              "RelativeToolTip": "GoalTrackerApp\\Controllers\\GoalController.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAkwKoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T12:17:15.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StatusService.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\StatusService.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Services\\StatusService.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\StatusService.cs",
+              "RelativeToolTip": "DataAccess\\Services\\StatusService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwC0AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T12:33:03.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ImportanceService.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\ImportanceService.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Services\\ImportanceService.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\ImportanceService.cs",
+              "RelativeToolTip": "DataAccess\\Services\\ImportanceService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwDEAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T15:31:19.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ImportanceController.cs",
+              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\ImportanceController.cs",
+              "RelativeDocumentMoniker": "GoalTrackerApp\\Controllers\\ImportanceController.cs",
+              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\ImportanceController.cs",
+              "RelativeToolTip": "GoalTrackerApp\\Controllers\\ImportanceController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T11:50:51.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "DataAccess\\Context\\AppDbContext.cs",
@@ -432,12 +536,11 @@
               "RelativeToolTip": "DataAccess\\Context\\AppDbContext.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAAACMAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:10:54.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T14:10:54.891Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "GoalEmailRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\GoalEmailRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\GoalEmailRepository.cs",
@@ -445,12 +548,11 @@
               "RelativeToolTip": "DataAccess\\Repositories\\GoalEmailRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T07:30:29.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T07:30:29.985Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "ImportanceRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\ImportanceRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\ImportanceRepository.cs",
@@ -462,19 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ImportanceService.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\ImportanceService.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Services\\ImportanceService.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\ImportanceService.cs",
-              "RelativeToolTip": "DataAccess\\Services\\ImportanceService.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAkwDIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T15:31:19.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Program.cs",
               "RelativeDocumentMoniker": "GoalTrackerApp\\Program.cs",
@@ -486,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\appsettings.Development.json",
               "RelativeDocumentMoniker": "GoalTrackerApp\\appsettings.Development.json",
@@ -498,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "ApiExtensions.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Extensions\\ApiExtensions.cs",
               "RelativeDocumentMoniker": "GoalTrackerApp\\Extensions\\ApiExtensions.cs",
@@ -510,19 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EmailOptions.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\EmailSender\\EmailOptions.cs",
-              "RelativeDocumentMoniker": "EmailSender\\EmailOptions.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\EmailSender\\EmailOptions.cs",
-              "RelativeToolTip": "EmailSender\\EmailOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T16:51:23.464Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "JWTOptions.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\JWT\\JWTOptions.cs",
               "RelativeDocumentMoniker": "JWT\\JWTOptions.cs",
@@ -534,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "GoalInputContract.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Contracts\\GoalInputContract.cs",
               "RelativeDocumentMoniker": "GoalTrackerApp\\Contracts\\GoalInputContract.cs",
@@ -546,7 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "GoalContract.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Contracts\\GoalContract.cs",
               "RelativeDocumentMoniker": "GoalTrackerApp\\Contracts\\GoalContract.cs",
@@ -558,7 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "GoalEmailService.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\GoalEmailService.cs",
               "RelativeDocumentMoniker": "DataAccess\\Services\\GoalEmailService.cs",
@@ -570,7 +648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\UserRepository.cs",
@@ -582,7 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "ThemeSetRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\ThemeSetRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\ThemeSetRepository.cs",
@@ -594,7 +672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "ThemeRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\ThemeRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\ThemeRepository.cs",
@@ -606,7 +684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "StatusRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\StatusRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\StatusRepository.cs",
@@ -618,7 +696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "ImportanceThemeRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\ImportanceThemeRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\ImportanceThemeRepository.cs",
@@ -630,7 +708,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IUserRepository.cs",
@@ -642,7 +720,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "DateTimeManager.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Core\\DateTimeManager.cs",
               "RelativeDocumentMoniker": "Core\\DateTimeManager.cs",
@@ -654,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "GoalEmailModel.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Core\\Models\\GoalEmailModel.cs",
               "RelativeDocumentMoniker": "Core\\Models\\GoalEmailModel.cs",
@@ -666,7 +744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "GoalEmail.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Entities\\GoalEmail.cs",
               "RelativeDocumentMoniker": "DataAccess\\Entities\\GoalEmail.cs",
@@ -678,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "SendEmail.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Entities\\SendEmail.cs",
               "RelativeDocumentMoniker": "DataAccess\\Entities\\SendEmail.cs",
@@ -690,7 +768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "SendEmailModel.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Core\\Models\\SendEmailModel.cs",
               "RelativeDocumentMoniker": "Core\\Models\\SendEmailModel.cs",
@@ -702,7 +780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "GoalModel.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Core\\Models\\GoalModel.cs",
               "RelativeDocumentMoniker": "Core\\Models\\GoalModel.cs",
@@ -714,7 +792,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "GoalTrackerApp\\Controllers\\UserController.cs",
@@ -726,19 +804,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ISendEmailService.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\Interfaces\\ISendEmailService.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Services\\Interfaces\\ISendEmailService.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\Interfaces\\ISendEmailService.cs",
-              "RelativeToolTip": "DataAccess\\Services\\Interfaces\\ISendEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T10:53:19.394Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "IGoalEmailService.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\Interfaces\\IGoalEmailService.cs",
               "RelativeDocumentMoniker": "DataAccess\\Services\\Interfaces\\IGoalEmailService.cs",
@@ -750,7 +816,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "UserLoginContract.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Contracts\\UserLoginContract.cs",
               "RelativeDocumentMoniker": "GoalTrackerApp\\Contracts\\UserLoginContract.cs",
@@ -762,7 +828,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "GoalTrackerApp.csproj",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\GoalTrackerApp.csproj",
               "RelativeDocumentMoniker": "GoalTrackerApp\\GoalTrackerApp.csproj",
@@ -774,7 +840,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "DataAccess\\Services\\UserService.cs",
@@ -786,7 +852,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\PasswordHasher\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "PasswordHasher\\PasswordHasher.cs",
@@ -798,7 +864,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "ThemeController.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\ThemeController.cs",
               "RelativeDocumentMoniker": "GoalTrackerApp\\Controllers\\ThemeController.cs",
@@ -810,31 +876,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "IGoalEmailRepository.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IGoalEmailRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IGoalEmailRepository.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IGoalEmailRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IGoalEmailRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T09:40:15.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "IGoalRepository.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IGoalRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IGoalRepository.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IGoalRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IGoalRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T11:06:02.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "IImportanceThemeRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IImportanceThemeRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IImportanceThemeRepository.cs",
@@ -846,7 +888,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "IRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IRepository.cs",
@@ -858,7 +900,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "ISendEmailRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\ISendEmailRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\ISendEmailRepository.cs",
@@ -870,7 +912,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "IThemeSetRepository.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IThemeSetRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IThemeSetRepository.cs",
@@ -882,7 +924,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "IThemeReposirory.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Repositories\\Interfaces\\IThemeReposirory.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IThemeReposirory.cs",
@@ -894,7 +936,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Absrtactions\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "Absrtactions\\IPasswordHasher.cs",
@@ -906,7 +948,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "IJWTProvider.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Absrtactions\\IJWTProvider.cs",
               "RelativeDocumentMoniker": "Absrtactions\\IJWTProvider.cs",
@@ -918,7 +960,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "IDateTimeManager.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Core\\Interfaces\\IDateTimeManager.cs",
               "RelativeDocumentMoniker": "Core\\Interfaces\\IDateTimeManager.cs",
@@ -930,7 +972,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "IModel.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Core\\Interfaces\\IModel.cs",
               "RelativeDocumentMoniker": "Core\\Interfaces\\IModel.cs",
@@ -942,7 +984,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "ThemeService.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\ThemeService.cs",
               "RelativeDocumentMoniker": "DataAccess\\Services\\ThemeService.cs",
@@ -954,19 +996,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "StatusService.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\StatusService.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Services\\StatusService.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\StatusService.cs",
-              "RelativeToolTip": "DataAccess\\Services\\StatusService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T12:33:03.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "ThemeSetContract.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Contracts\\ThemeSetContract.cs",
               "RelativeDocumentMoniker": "GoalTrackerApp\\Contracts\\ThemeSetContract.cs",
@@ -978,19 +1008,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "ImportanceController.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\ImportanceController.cs",
-              "RelativeDocumentMoniker": "GoalTrackerApp\\Controllers\\ImportanceController.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\ImportanceController.cs",
-              "RelativeToolTip": "GoalTrackerApp\\Controllers\\ImportanceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T11:50:51.006Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "JWTProvider.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\JWT\\JWTProvider.cs",
               "RelativeDocumentMoniker": "JWT\\JWTProvider.cs",
@@ -1002,7 +1020,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "ThemeSetService.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\ThemeSetService.cs",
               "RelativeDocumentMoniker": "DataAccess\\Services\\ThemeSetService.cs",
@@ -1014,7 +1032,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "20250601125345_FixImportanceThemeId.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Migrations\\20250601125345_FixImportanceThemeId.cs",
               "RelativeDocumentMoniker": "DataAccess\\Migrations\\20250601125345_FixImportanceThemeId.cs",
@@ -1026,7 +1044,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "ThemeSet.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Entities\\ThemeSet.cs",
               "RelativeDocumentMoniker": "DataAccess\\Entities\\ThemeSet.cs",
@@ -1038,7 +1056,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "Theme.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Entities\\Theme.cs",
               "RelativeDocumentMoniker": "DataAccess\\Entities\\Theme.cs",
@@ -1050,7 +1068,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "Importance.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Entities\\Importance.cs",
               "RelativeDocumentMoniker": "DataAccess\\Entities\\Importance.cs",
@@ -1062,7 +1080,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "ImportanceTheme.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Entities\\ImportanceTheme.cs",
               "RelativeDocumentMoniker": "DataAccess\\Entities\\ImportanceTheme.cs",
@@ -1074,7 +1092,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "StatusController.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\GoalTrackerApp\\Controllers\\StatusController.cs",
               "RelativeDocumentMoniker": "GoalTrackerApp\\Controllers\\StatusController.cs",
@@ -1086,7 +1104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "ThemeSetModel.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Core\\Models\\ThemeSetModel.cs",
               "RelativeDocumentMoniker": "Core\\Models\\ThemeSetModel.cs",
@@ -1098,7 +1116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "ImportanceThemeModel.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Core\\Models\\ImportanceThemeModel.cs",
               "RelativeDocumentMoniker": "Core\\Models\\ImportanceThemeModel.cs",
@@ -1110,7 +1128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "ThemeModel.cs",
               "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\Core\\Models\\ThemeModel.cs",
               "RelativeDocumentMoniker": "Core\\Models\\ThemeModel.cs",
@@ -1119,18 +1137,6 @@
               "ViewState": "AgIAAB4AAAAAAAAAAAAMwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T14:15:06.22Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "IGoalService.cs",
-              "DocumentMoniker": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\Interfaces\\IGoalService.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Services\\Interfaces\\IGoalService.cs",
-              "ToolTip": "D:\\repos\\GoalTracker\\GoalTrackerApp\\DataAccess\\Services\\Interfaces\\IGoalService.cs",
-              "RelativeToolTip": "DataAccess\\Services\\Interfaces\\IGoalService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T04:47:28.236Z"
             },
             {
               "$type": "Document",

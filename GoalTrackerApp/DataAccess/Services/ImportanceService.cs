@@ -47,7 +47,7 @@ namespace DataAccess.Services
 
         public async Task<ICollection<ImportanceModel>> GetAllAsync()
         {
-            return await _importanceRepository.GetAllAsync();
+            return (await _importanceRepository.GetAllAsync()).OrderBy(x => x.MinDays).Reverse().ToList();
         }
 
         public async Task<ImportanceModel?> GetByIdAsync(Guid id)

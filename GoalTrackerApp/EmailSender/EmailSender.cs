@@ -1,4 +1,5 @@
-﻿using DataAccess.Entities;
+﻿using Core.Models;
+using DataAccess.Entities;
 using DataAccess.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -13,6 +14,7 @@ namespace EmailSender
         private readonly Timer _timer;
         private readonly IServiceProvider _serviceProvider;
         private IEnumerable<SendEmail> messages = new List<SendEmail>();
+        private IEnumerable<Goal> goalsDeadline = new List<Goal>();
         private readonly EmailOptions _options;
         public EmailSender(IServiceProvider serviceProvider, IOptions<EmailOptions> options)
         {
@@ -28,6 +30,17 @@ namespace EmailSender
             using (IServiceScope scope = _serviceProvider.CreateScope())
             {
                 ISendEmailService sendEmailService = scope.ServiceProvider.GetRequiredService<ISendEmailService>();
+                IGoalService goalService = scope.ServiceProvider.GetRequiredService<IGoalService>();
+
+                goalsDeadline = await goalService.GetDeadlineAsync();
+                if (goalsDeadline.Count() == 0)
+                {
+                    return;
+                }
+                foreach (Goal goal in goalsDeadline)
+                {
+                    await SendEmailAboutDeadline(goal);
+                }
 
                 messages = await sendEmailService.GetNotSendedAsync();
                 if (messages.Count() == 0)
@@ -68,6 +81,33 @@ namespace EmailSender
                     await client.DisconnectAsync(true);
                     await sendEmailService.UpdateAsync(new Core.Models.SendEmailModel(inputMessage.Id, inputMessage.Date,
                         inputMessage.Message, true));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+        }
+
+        private async Task SendEmailAboutDeadline(Goal goal)
+        {
+            using (IServiceScope scope = _serviceProvider.CreateScope())
+            {
+                try
+                {
+                    ISendEmailService sendEmailService = scope.ServiceProvider.GetRequiredService<ISendEmailService>();
+                    MimeMessage message = new MimeMessage();
+                    message.From.Add(MailboxAddress.Parse(_options.Email));
+
+                    message.To.Add(MailboxAddress.Parse(goal.IdUserNavigation.Email));
+                    message.Subject = goal.Title;
+                    message.Body = new TextPart("html") { Text = $"<h2>Дедлайн прошел: {goal.Deadline}!</h2>" };
+
+                    using var client = new SmtpClient();
+                    await client.ConnectAsync(_options.SMTP, _options.Port, MailKit.Security.SecureSocketOptions.SslOnConnect);
+                    await client.AuthenticateAsync(_options.Email, _options.Password);
+                    await client.SendAsync(message);
+                    await client.DisconnectAsync(true);
                 }
                 catch (Exception ex)
                 {

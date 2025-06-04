@@ -1,17 +1,21 @@
-﻿using Core.Models;
+﻿using Core.Interfaces;
+using Core.Models;
 using DataAccess.Context;
 using DataAccess.Entities;
 using DataAccess.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Protocols;
 
 namespace DataAccess.Repositories
 {
     public class GoalRepository : IGoalRepository
     {
+        private readonly IDateTimeManager _timeManager;
         public AppDbContext Context { get; }
-        public GoalRepository(AppDbContext context)
+        public GoalRepository(AppDbContext context, IDateTimeManager dateTimeManager)
         {
             Context = context;
+            _timeManager = dateTimeManager;
         }
 
         public async Task AddAsync(GoalModel entity)
@@ -87,6 +91,12 @@ namespace DataAccess.Repositories
             goal.Punishment = entity.Punishment;
             goal.AutoImportance = entity.AutoImportance;
             await Context.SaveChangesAsync();
+        }
+
+        public async Task<ICollection<Goal>> GetDeadlineAsync()
+        {
+            DateTime timeNow = _timeManager.RemoveSeconds(DateTime.Now);
+            return (ICollection<Goal>)await Context.Goals.AsNoTracking().Include(x => x.IdUserNavigation).Where(x => x.Deadline <= timeNow).ToListAsync();
         }
     }
 }

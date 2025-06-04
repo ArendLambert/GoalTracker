@@ -1,4 +1,5 @@
 ﻿using Core.Models;
+using DataAccess.Entities;
 
 namespace DataAccess.Services.Interfaces
 {
@@ -13,5 +14,6 @@ namespace DataAccess.Services.Interfaces
         Task<ICollection<GoalModel>> GetByUserIdAsync(Guid id);
         Task UpdateAsync(GoalModel entity);
         Task UpdateAutoImportance(GoalModel entity, bool autoImportance);
+        Task<ICollection<Goal>> GetDeadlineAsync();
     }
 }

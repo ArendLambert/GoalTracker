@@ -1,5 +1,6 @@
 ﻿using Core.Interfaces;
 using Core.Models;
+using DataAccess.Entities;
 using DataAccess.Repositories.Interfaces;
 using DataAccess.Services.Interfaces;
 
@@ -37,6 +38,7 @@ namespace DataAccess.Services
 
         public async Task<ICollection<GoalModel>> GetAllAsync()
         {
+            //ICollection<GoalModel> goals = await _goalRepository.GetAllAsync();
             return await _goalRepository.GetAllAsync();
         }
 
@@ -59,6 +61,11 @@ namespace DataAccess.Services
         {
             entity.AutoImportance = autoImportance;
             await _goalRepository.UpdateAsync(entity);
+        }
+
+        public async Task<ICollection<Goal>> GetDeadlineAsync()
+        {
+            return await _goalRepository.GetDeadlineAsync();
         }
     }
 }

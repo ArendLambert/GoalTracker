@@ -28,14 +28,22 @@ namespace DataAccess.Services
             return await _statusRepository.ExistsAsync(id);
         }
 
-        public Task<ICollection<StatusModel>> GetAllAsync()
+        public async Task<ICollection<StatusModel>> GetAllAsync()
         {
-            return _statusRepository.GetAllAsync();
+            ICollection<StatusModel> statuses = await _statusRepository.GetAllAsync();
+            ICollection<StatusModel> statusesFiltered = new List<StatusModel>();
+            statusesFiltered.Add(statuses.First(x => x.Title == "Новая"));
+            statusesFiltered.Add(statuses.First(x => x.Title == "В процессе"));
+            statusesFiltered.Add(statuses.First(x => x.Title == "На паузе"));
+            statusesFiltered.Add(statuses.First(x => x.Title == "Завершена"));
+            statusesFiltered.Add(statuses.First(x => x.Title == "Отменена"));
+            statusesFiltered.Add(statuses.First(x => x.Title == "Просрочена"));
+            return statusesFiltered;
         }
 
-        public Task<StatusModel?> GetByIdAsync(Guid id)
+        public async Task<StatusModel?> GetByIdAsync(Guid id)
         {
-            return _statusRepository.GetByIdAsync(id);
+            return await _statusRepository.GetByIdAsync(id);
         }
 
         public async Task UpdateAsync(StatusModel entity)

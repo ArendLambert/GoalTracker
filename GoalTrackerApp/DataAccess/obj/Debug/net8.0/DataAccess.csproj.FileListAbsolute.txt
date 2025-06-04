@@ -40,3 +40,4 @@ D:\repos\GoalTracker\GoalTrackerApp\DataAccess\obj\Debug\net8.0\refint\DataAcces
 D:\repos\GoalTracker\GoalTrackerApp\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 D:\repos\GoalTracker\GoalTrackerApp\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
 D:\repos\GoalTracker\GoalTrackerApp\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+D:\repos\GoalTracker\GoalTrackerApp\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json

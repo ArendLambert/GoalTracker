@@ -80,6 +80,9 @@ namespace GoalTrackerApp.Controllers
             {
                 return Forbid();
             }
+            ICollection<ImportanceModel> importances = await _importanceService.GetAllAsync();
+            goals = (List<GoalModel>)goals.OrderBy(x => importances
+            .First(c => c.Id == x.IdImportance).MinDays).ToList();
             foreach (GoalModel goal in goals)
             {
                 List<GoalEmailModel> goalEmails = (List<GoalEmailModel>)await _goalEmailService.GetByIdGoalAsync(goal.Id);

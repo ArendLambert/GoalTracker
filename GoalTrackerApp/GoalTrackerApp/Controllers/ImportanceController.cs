@@ -19,7 +19,7 @@ namespace GoalTrackerApp.Controllers
         [Authorize]
         public async Task<ActionResult<IEnumerable<ImportanceModel>>> GetAllAsync()
         {
-            return Ok(await _importanceService.GetAllAsync());
+            return Ok((await _importanceService.GetAllAsync()));
         }
 
         [HttpGet]

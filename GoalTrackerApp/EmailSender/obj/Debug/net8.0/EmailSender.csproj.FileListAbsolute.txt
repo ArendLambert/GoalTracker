@@ -40,3 +40,4 @@ D:\repos\GoalTracker\GoalTrackerApp\EmailSender\obj\Debug\net8.0\EmailSender.dll
 D:\repos\GoalTracker\GoalTrackerApp\EmailSender\obj\Debug\net8.0\refint\EmailSender.dll
 D:\repos\GoalTracker\GoalTrackerApp\EmailSender\obj\Debug\net8.0\EmailSender.pdb
 D:\repos\GoalTracker\GoalTrackerApp\EmailSender\obj\Debug\net8.0\ref\EmailSender.dll
+D:\repos\GoalTracker\GoalTrackerApp\EmailSender\obj\Debug\net8.0\EmailSender.sourcelink.json

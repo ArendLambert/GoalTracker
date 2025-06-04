@@ -382,3 +382,4 @@ D:\repos\GoalTracker\GoalTrackerApp\GoalTrackerApp\obj\Debug\net8.0\refint\GoalT
 D:\repos\GoalTracker\GoalTrackerApp\GoalTrackerApp\obj\Debug\net8.0\GoalTrackerApp.pdb
 D:\repos\GoalTracker\GoalTrackerApp\GoalTrackerApp\obj\Debug\net8.0\GoalTrackerApp.genruntimeconfig.cache
 D:\repos\GoalTracker\GoalTrackerApp\GoalTrackerApp\obj\Debug\net8.0\ref\GoalTrackerApp.dll
+D:\repos\GoalTracker\GoalTrackerApp\GoalTrackerApp\obj\Debug\net8.0\GoalTrackerApp.sourcelink.json

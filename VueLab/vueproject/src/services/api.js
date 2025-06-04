@@ -122,9 +122,9 @@ export const fetchGetGoalById = async (userId, goalId) => {
 
 export const fetchCreateGoal = async (goal) => {
   try {
-    if(goal.idImportance = 'null') {
-      goal.idImportance = null;
-    }
+    // if(goal.idImportance = 'null') {
+    //   goal.idImportance = null;
+    // }
     console.log('Добавление цели:', goal);
     const response = await apiClient.post('/Goal/add', goal, {
     });
