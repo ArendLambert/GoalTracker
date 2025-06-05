@@ -1,16 +1,12 @@
-<template>
-    fdkmpfm
-</template>
+<template>fdkmpfm</template>
 
 <script setup>
-import { onMounted } from 'vue';
-import router from '../router/script';
+import { onMounted } from "vue";
+import router from "../router/script";
 onMounted(() => {
-    console.log('HomeView mounted');
-    router.push({ path: '/registerpage' });
-  }
-);
+  console.log("HomeView mounted");
+  router.push({ path: "/registerpage" });
+});
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

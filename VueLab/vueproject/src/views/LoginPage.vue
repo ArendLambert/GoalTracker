@@ -15,37 +15,41 @@
         required
       />
       <button type="submit" :disabled="isLoading">
-        {{ isLoading ? 'Загрузка...' : 'Войти' }}
+        {{ isLoading ? "Загрузка..." : "Войти" }}
       </button>
     </form>
     <p class="switch-auth">
-        Нет аккаунта?
-        <router-link to="/registerpage">Создать</router-link>
+      Нет аккаунта?
+      <router-link to="/registerpage">Создать</router-link>
     </p>
   </div>
 </template>
 
 <script>
-import { useAuthStore, useThemeStore } from '@/store';
-import { decodeJwtToken } from '@/utils/jwt';
-import { fetchLoginUser, fetchExistUserByEmail, fetchGetUserById } from '@/services/api';
-import router from '../router/script';
-import { toast } from 'vue3-toastify';
+import { useAuthStore, useThemeStore } from "@/store";
+import { decodeJwtToken } from "@/utils/jwt";
+import {
+  fetchLoginUser,
+  fetchExistUserByEmail,
+  fetchGetUserById,
+} from "@/services/api";
+import router from "../router/script";
+import { toast } from "vue3-toastify";
 
 export default {
-  name: 'LoginPage',
+  name: "LoginPage",
   data() {
     return {
-      emailInput: '',
-      passwordInput: '',
+      emailInput: "",
+      passwordInput: "",
       isLoading: false,
     };
   },
   mounted() {
     const decoded = decodeJwtToken();
-          if (decoded){
-            router.push({ path: '/goals' });
-          }
+    if (decoded) {
+      router.push({ path: "/goals" });
+    }
   },
   methods: {
     async signIn() {
@@ -53,15 +57,15 @@ export default {
       try {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(this.emailInput)) {
-          toast.error('Введите корректный email');
+          toast.error("Введите корректный email");
           return;
         }
         const existUser = await fetchExistUserByEmail(this.emailInput);
         if (!existUser) {
-          this.toast.error('Пользователь с таким email не существует');
+          this.toast.error("Пользователь с таким email не существует");
           return;
         }
-        console.log(this.emailInput, this.passwordInput)
+        console.log(this.emailInput, this.passwordInput);
         await fetchLoginUser(this.emailInput, this.passwordInput);
 
         const decoded = decodeJwtToken();
@@ -77,17 +81,17 @@ export default {
           if (user.idThemeSet) {
             await themeStore.loadTheme(user.idThemeSet);
           } else {
-            await themeStore.loadTheme('5EC6627F-1F1B-47E6-8EBD-367BC345F702');
+            await themeStore.loadTheme("5EC6627F-1F1B-47E6-8EBD-367BC345F702");
           }
-          toast.success('Вы успешно вошли!');
-          router.push({ path: '/goals' });
+          toast.success("Вы успешно вошли!");
+          router.push({ path: "/goals" });
         } else {
-          toast.error('Ошибка: токен не получен');
+          toast.error("Ошибка: токен не получен");
         }
       } catch (error) {
-        console.error('Ошибка входа:', error.response?.data || error.message);
-        console.log(error)
-        toast.error('Ошибка входа. Проверьте email и пароль.');
+        console.error("Ошибка входа:", error.response?.data || error.message);
+        console.log(error);
+        toast.error("Ошибка входа. Проверьте email и пароль.");
       } finally {
         this.isLoading = false;
       }
@@ -210,5 +214,4 @@ button:disabled {
 .switch-auth a:hover {
   color: var(--color-accent-hover, #a442d1);
 }
-
 </style>

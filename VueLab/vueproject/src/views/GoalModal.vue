@@ -1,7 +1,7 @@
 <template>
   <div class="modal-backdrop">
     <div class="modal">
-      <h2>{{ isEditing ? 'Редактировать цель' : 'Создать цель' }}</h2>
+      <h2>{{ isEditing ? "Редактировать цель" : "Создать цель" }}</h2>
 
       <label>Название</label>
       <input v-model="goal.title" type="text" />
@@ -21,7 +21,11 @@
 
       <label>Приоритет</label>
       <select v-model="goal.priorityId">
-        <option v-for="priority in importances" :key="priority.id" :value="priority.id">
+        <option
+          v-for="priority in importances"
+          :key="priority.id"
+          :value="priority.id"
+        >
           {{ priority.name }}
         </option>
       </select>
@@ -35,8 +39,8 @@
 </template>
 
 <script setup>
-import { reactive, watch, computed } from 'vue';
-import { toRaw, toRefs } from 'vue';
+import { reactive, watch, computed } from "vue";
+import { toRaw, toRefs } from "vue";
 
 const props = defineProps({
   modelValue: Boolean,
@@ -44,20 +48,19 @@ const props = defineProps({
   statuses: Array,
   importances: Array,
   themes: Array,
-  users: Array
+  users: Array,
 });
 
-const emit = defineEmits(['update:modelValue', 'save', 'close']);
+const emit = defineEmits(["update:modelValue", "save", "close"]);
 
 const isEditing = computed(() => !!props.goalData?.id);
-
 
 // Локальная копия цели
 const goal = reactive({
   id: null,
-  title: '',
-  description: '',
-  deadline: '',
+  title: "",
+  description: "",
+  deadline: "",
   statusId: null,
   priorityId: null,
   themeId: null,
@@ -72,9 +75,9 @@ watch(
     } else {
       Object.assign(goal, {
         id: null,
-        title: '',
-        description: '',
-        deadline: '',
+        title: "",
+        description: "",
+        deadline: "",
         statusId: null,
         priorityId: null,
         themeId: null,
@@ -82,12 +85,12 @@ watch(
       });
     }
   },
-  { immediate: true }
+  { immediate: true },
 );
 
 function save() {
-  emit('save', toRaw(goal));
-  emit('update:modelValue', false);
+  emit("save", toRaw(goal));
+  emit("update:modelValue", false);
 }
 </script>
 

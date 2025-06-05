@@ -364,10 +364,21 @@
         }
       }
     },
-    "/Theme": {
+    "/Theme/{idUser}": {
       "get": {
         "tags": [
           "Theme"
+        ],
+        "parameters": [
+          {
+            "name": "idUser",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
         ],
         "responses": {
           "200": {

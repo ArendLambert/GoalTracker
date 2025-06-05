@@ -17,7 +17,7 @@
         required
       />
       <button type="submit" :disabled="isLoading">
-        {{ isLoading ? 'Загрузка...' : 'Создать аккаунт' }}
+        {{ isLoading ? "Загрузка..." : "Создать аккаунт" }}
       </button>
     </form>
     <p class="switch-auth">
@@ -28,26 +28,30 @@
 </template>
 
 <script>
-import { useAuthStore, useThemeStore } from '@/store';
-import { decodeJwtToken } from '@/utils/jwt';
-import { fetchCreateUser, fetchExistUserByEmail, fetchUpdateUser } from '@/services/api';
-import router from '../router/script';
-import {toast} from "vue3-toastify"
+import { useAuthStore, useThemeStore } from "@/store";
+import { decodeJwtToken } from "@/utils/jwt";
+import {
+  fetchCreateUser,
+  fetchExistUserByEmail,
+  fetchUpdateUser,
+} from "@/services/api";
+import router from "../router/script";
+import { toast } from "vue3-toastify";
 
 export default {
-  name: 'RegisterPage',
+  name: "RegisterPage",
   data() {
     return {
-      emailInput: '',
-      passwordInput: '',
+      emailInput: "",
+      passwordInput: "",
       isLoading: false,
     };
   },
   mounted() {
     const decoded = decodeJwtToken();
-          if (decoded){
-            router.push({ path: '/goals' });
-          }
+    if (decoded) {
+      router.push({ path: "/goals" });
+    }
   },
   methods: {
     async signUp() {
@@ -55,12 +59,12 @@ export default {
       try {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(this.emailInput)) {
-          alert('Введите корректный email');
+          alert("Введите корректный email");
           return;
         }
         const existUser = await fetchExistUserByEmail(this.emailInput);
         if (existUser) {
-          this.toast.error('Пользователь с таким email уже существует');
+          this.toast.error("Пользователь с таким email уже существует");
           return;
         }
         await fetchCreateUser(this.emailInput, this.passwordInput);
@@ -71,23 +75,25 @@ export default {
           authStore.email = decoded.email;
           authStore.saveToSessionStorage();
           const themeStore = useThemeStore();
-          await themeStore.loadTheme('5EC6627F-1F1B-47E6-8EBD-367BC345F702');
-          // await fetchUpdateUser(authStore.idUser, authStore.email, this.passwordInput, 'E81C90E4-053E-4824-9FB6-0E13EEECE02D');
-          router.push({ path: '/goals' });
+          await themeStore.loadTheme("5EC6627F-1F1B-47E6-8EBD-367BC345F702");
+          router.push({ path: "/goals" });
         } else {
-          alert('Ошибка: токен не получен');
+          alert("Ошибка: токен не получен");
         }
       } catch (error) {
-        console.error('Ошибка регистрации:', error.response?.data || error.message);
-        alert('Ошибка при создании аккаунта. Проверьте данные.');
+        console.error(
+          "Ошибка регистрации:",
+          error.response?.data || error.message,
+        );
+        alert("Ошибка при создании аккаунта. Проверьте данные.");
       } finally {
         this.isLoading = false;
       }
     },
   },
   setup() {
-    return { toast }
-  }
+    return { toast };
+  },
 };
 </script>
 
@@ -205,5 +211,4 @@ button:disabled {
 .switch-auth a:hover {
   color: var(--color-accent-hover, #a442d1);
 }
-
 </style>

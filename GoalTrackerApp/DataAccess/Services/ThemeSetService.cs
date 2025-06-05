@@ -12,9 +12,11 @@ namespace DataAccess.Services
             _themeSetRepository = themeSetRepository;
         }
 
-        public async Task AddAsync(Guid idTheme, Guid? idUserCreator, bool @public)
+        public async Task<Guid> AddAsync(Guid idTheme, Guid? idUserCreator, bool @public)
         {
-            await _themeSetRepository.AddAsync(new ThemeSetModel(Guid.NewGuid(), idTheme, idUserCreator, @public));
+            Guid id = Guid.NewGuid();
+            await _themeSetRepository.AddAsync(new ThemeSetModel(id, idTheme, idUserCreator, @public));
+            return id;
         }
 
         public async Task<bool> DeleteAsync(Guid id)
@@ -33,9 +35,9 @@ namespace DataAccess.Services
             return await _themeSetRepository.GetAllAsync();
         }
 
-        public async Task<ICollection<ThemeSetModel>> GetAllPublicAsync()
+        public async Task<ICollection<ThemeSetModel>> GetAllPublicAsync(Guid idUser)
         {
-            return await _themeSetRepository.GetAllPublicAsync();
+            return await _themeSetRepository.GetAllPublicAsync(idUser);
         }
 
         public async Task<ThemeSetModel?> GetByIdAsync(Guid id)

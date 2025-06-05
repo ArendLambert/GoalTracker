@@ -12,12 +12,14 @@ namespace DataAccess.Services
             _themeRepository = themeRepository;
         }
 
-        public async Task AddAsync(string name, string primaryColor, string secondaryColor, string accentColor,
+        public async Task<Guid> AddAsync(string name, string primaryColor, string secondaryColor, string accentColor,
             string backgroundColor, string textColor, string borderColor, string shadowColor, string cardBackground,
             string buttonColor, string buttonTextColor)
         {
-            await _themeRepository.AddAsync(new ThemeModel(Guid.NewGuid(), name, primaryColor, secondaryColor,
+            Guid id = Guid.NewGuid();
+            await _themeRepository.AddAsync(new ThemeModel(id, name, primaryColor, secondaryColor,
                 accentColor, backgroundColor, textColor, borderColor, shadowColor, cardBackground, buttonColor, buttonTextColor));
+            return id;
         }
 
         public async Task<bool> DeleteAsync(Guid id)

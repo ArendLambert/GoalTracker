@@ -44,10 +44,10 @@ namespace DataAccess.Repositories
                 .ToListAsync();
         }
 
-        public async Task<ICollection<ThemeSetModel>> GetAllPublicAsync()
+        public async Task<ICollection<ThemeSetModel>> GetAllPublicAsync(Guid idUser)
         {
             return await Context.ThemeSets.AsNoTracking()
-                .Where(x => x.Public)
+                .Where(x => x.Public || x.UserCreator == idUser)
                 .Select(x => new ThemeSetModel(x.Id, x.IdTheme, x.UserCreator, x.Public))
                 .ToListAsync();
         }

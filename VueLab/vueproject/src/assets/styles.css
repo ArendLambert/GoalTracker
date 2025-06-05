@@ -1,0 +1,845 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  overflow: hidden;
+}
+
+.content {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+:deep(#app) {
+  padding: 0;
+  max-width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--color-background-soft);
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-heading);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logout-button {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: var(--color-accent);
+}
+
+button:hover {
+  background-color: var(--color-accent);
+  /* color: var(--color-button-text); */
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 220px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  background-color: var(--color-background-mute);
+  border-right: 1px solid var(--color-border);
+}
+
+.nav-item {
+  padding: 14px 20px;
+  text-align: left;
+  border-left: 4px solid transparent;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: var(--color-background-soft);
+  border-left-color: var(--color-accent);
+}
+
+.nav-item.active {
+  border-left-color: var(--color-accent);
+  font-weight: bold;
+  background-color: var(--color-background-soft);
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  padding-top: 1rem;
+  background-color: var(--color-background);
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tab-section {
+  display: none;
+}
+
+.tab-section.active {
+  display: block;
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.task-card {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--color-heading);
+}
+
+.task-description {
+  word-break: break-all;     /* Переносит длинные слова */
+  overflow-wrap: break-word;  /* Альтернативное свойство для совместимости */
+  white-space: pre-wrap;      /* Сохраняет пробелы и переносы строк */
+  overflow: auto;             /* Добавляет прокрутку при необходимости */
+  max-height: 250px;          /* Ограничивает высоту (можно изменить) */
+}
+
+.task-description::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-description::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 4px;
+}
+
+.task-description::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.task-description::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.very-important {
+  color: var(--color-button);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.reminders-button-container {
+  margin-bottom: 10px;
+  display: flex;
+  /* flex-direction: column;   */
+  /* justify-content: end; */
+  align-items: flex-start; /* Выравниваем содержимое по левому краю */
+  /* min-height: 100%; */
+}
+
+.reminders-button-container button {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  color: var(--color-text);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.reminders-button-container button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+}
+.task-actions button {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  color: var(--color-text);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+.task-actions button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+}
+
+.delete-theme-button {
+    background-color: var(--color-accent  );
+  color: var(--color-button-text);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  /* border-color: var(--color-border-hover);
+  color: var(--color-button); */
+}
+
+.delete-theme-button:hover {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+}
+
+.placeholder {
+  border: 2px dashed var(--color-border-hover);
+  background-color: var(--color-background-soft);
+  padding: 3rem;
+  text-align: center;
+  color: var(--color-secondary);
+  border-radius: 12px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 160px;
+    min-width: 140px;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+
+  .tasks-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .app-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 120px;
+    min-width: 100px;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .tasks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.task-deadline,
+.task-status {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+}
+
+.sendEmail {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: var(--color-background-mute);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  max-height: 150px; /* Ограничиваем высоту контейнера */
+  overflow-y: auto; /* Включаем вертикальную прокрутку при переполнении */
+}
+
+/* Стили для заголовка */
+.sendEmail h4 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+/* Стили для списка */
+.sendEmail ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+/* Опционально: кастомизация полосы прокрутки */
+.sendEmail::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sendEmail::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 4px;
+}
+
+.sendEmail::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.sendEmail::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.add-task-button {
+  display: inline-block;
+  margin: 0 auto 2rem auto;
+  padding: 10px 20px;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-task-button:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.add-task-button:active {
+  transform: translateY(0);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+/* Общие стили для модальных окон */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--color-background);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: var(--color-text);
+  position: relative;
+}
+
+/* Стили для формы напоминаний */
+.reminder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.reminder-form button {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  color: var(--color-text);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.reminder-form button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+}
+
+.reminder-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-background-soft);
+  color: var(--color-text);
+}
+
+.reminder-list {
+  list-style: none;
+  padding-left: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 1rem; 
+}
+
+.reminder-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.reminder-list::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 4px;
+}
+
+.reminder-list::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.reminder-list::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.reminder-list button {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  color: var(--color-text);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.reminder-list button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+}
+
+.reminder-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modal-actions button {
+  margin-right: 0.5rem;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  color: var(--color-text);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.modal-actions button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+}
+
+.reminder-text {
+  min-height: 100px;
+  background-color: var(--color-background-soft);
+}
+
+/* Стилизация списка напоминаний */
+.reminder-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-background-soft);
+  padding: 10px;
+}
+
+.reminder-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: var(--color-background);
+  border-radius: 6px;
+  border: 1px solid var(--color-border-hover);
+  transition: background-color 0.2s ease;
+}
+
+.reminder-list li:hover {
+  background-color: var(--color-background-mute);
+}
+
+/* Заголовок напоминания */
+.reminder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.delete-btn {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  color: white;
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Текст напоминания */
+.reminder-message {
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: var(--color-text);
+}
+
+/* Фильтры */
+.task-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-background-mute);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.filter-input,
+.filter-select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-background-soft);
+  color: var(--color-text);
+  min-width: 285px;
+}
+
+/* Стили для формы создания/редактирования цели */
+.goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.input-field,
+.textarea-field,
+.select-field {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-background-soft);
+  color: var(--color-text);
+  width: 100%;
+  box-sizing: border-box;
+
+  word-break: break-all;
+  /* overflow-wrap: break-word; */
+  white-space: pre-wrap;
+}
+
+.textarea-field {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.logo{
+  /* width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-background-soft); */
+  display: flex;
+  flex-direction: row;
+}
+
+.logo img{
+  width: 50px;
+  height: 50px;
+  /* padding-right: 1rem; */
+}
+
+.logo div {
+  /* font-size: 1.5rem; */
+  color: var(--color-heading);
+  /* margin: 10px; */
+  padding: 0.4rem 0 0 1rem;
+}
+
+/* ======= Стили для вкладки "Темы" ======= */
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.theme-actions{
+    display: flex;
+    gap: 10px;
+    }
+
+.edit-theme-button,
+.add-theme-button {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.theme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.theme-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--color-background-soft);
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+.theme-buttons{
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-left: auto;
+}
+.theme-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.theme-name {
+  font-weight: bold;
+  font-size: large;
+}
+.select-button {
+  background-color: var(--color-button  );
+  color: var(--color-button-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+.no-themes {
+  font-style: italic;
+  color: var(--color-secondary);
+}
+
+.search-bar {
+  margin-bottom: 1rem;
+}
+
+.search-bar .input-field {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Стили формы темы */
+.fieldset-colors,
+.fieldset-importance {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+  min-height: fit-content;
+}
+
+.fieldset-importance {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.fieldset-colors {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0rem;
+}
+
+.fieldset-colors legend,
+.fieldset-importance legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.fieldset-colors label,
+.fieldset-importance label {
+  display: block;
+  margin-top: 5px;
+}
+.importance-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.input-field.small {
+  width: 60px;
+}
+.remove-button {
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-imp-button {
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Модальное окно темы */
+.modal-theme {
+  max-width: 1000px;         /* Больше места для двух колонок */
+  width: 90vw;              /* Адаптивная ширина */
+  max-height: 90vh;         /* Ограничение по высоте экрана */
+  overflow-y: auto;         /* Прокрутка по вертикали при необходимости */
+  padding: 20px;            /* Немного внутреннего отступа */
+  box-sizing: border-box;
+  background-color: var(--color-background-soft);  /* или ваша тема */
+  border-radius: 8px;
+}
+
+
+.fieldset-colors {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.color-input {
+  display: flex;
+  flex-direction: column;
+  min-height: 90px;
+}
+
+.color-input label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.palitra{
+  display: flex;
+  /* flex-direction: row; */
+  gap: 30px;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  background-color: var(--color-background-mute);
+  color: var(--color-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+  background-color: var(--color-background-soft);
+}
+
+.tab-button.active {
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+}

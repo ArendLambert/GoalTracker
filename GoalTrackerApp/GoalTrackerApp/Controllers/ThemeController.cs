@@ -22,19 +22,31 @@ namespace GoalTrackerApp.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<IEnumerable<ThemeSetContract>>> GetAllPublicAsync()
+        [Route("{idUser:guid}")]
+        public async Task<ActionResult<IEnumerable<ThemeSetContract>>> GetAllPublicAsync(Guid idUser)
         {
-            IEnumerable<ThemeSetModel> themeSets = await _themeSetService.GetAllPublicAsync();
+            IEnumerable<ThemeSetModel> themeSets = await _themeSetService.GetAllPublicAsync(idUser);
             IEnumerable<ThemeModel> themes = await _themeService.GetAllAsync();
-            return Ok(await Task.WhenAll(themeSets.Where(x => themes.Any(theme => theme.Id == x.IdTheme))
-                .Select(async x => new ThemeSetContract
+
+            var result = new List<ThemeSetContract>();
+
+            foreach (var x in themeSets.Where(x => themes.Any(theme => theme.Id == x.IdTheme)))
+            {
+                var theme = themes.First(theme => theme.Id == x.IdTheme);
+
+                var importanceThemes = await _importanceThemeService.GetByThemeIdAsync(x.IdTheme);
+
+                result.Add(new ThemeSetContract
                 {
                     Public = x.Public,
                     Id = x.Id,
-                    Theme = themes.First(theme => theme.Id == x.IdTheme),
+                    Theme = theme,
                     IdUserCreator = x.IdUserCreator,
-                    ImportanceThemes = await _importanceThemeService.GetByThemeIdAsync(x.IdTheme),
-                })));
+                    ImportanceThemes = importanceThemes
+                });
+            }
+
+            return Ok(result);
         }
 
         [HttpGet]
@@ -83,20 +95,21 @@ namespace GoalTrackerApp.Controllers
             }
             try
             {
-                await _themeService.AddAsync(themeSetContract.Theme.Name, themeSetContract.Theme.PrimaryColor,
+                Guid idTheme = await _themeService.AddAsync(themeSetContract.Theme.Name, themeSetContract.Theme.PrimaryColor,
                     themeSetContract.Theme.SecondaryColor, themeSetContract.Theme.AccentColor, themeSetContract.Theme.BackgroundColor,
                     themeSetContract.Theme.TextColor, themeSetContract.Theme.BorderColor, themeSetContract.Theme.ShadowColor,
                     themeSetContract.Theme.CardBackground, themeSetContract.Theme.ButtonColor, themeSetContract.Theme.ButtonTextColor);
                 foreach (ImportanceThemeModel importanceTheme in themeSetContract.ImportanceThemes)
                 {
-                    await _importanceThemeService.AddAsync(importanceTheme.Id, importanceTheme.IdTheme,
+                    await _importanceThemeService.AddAsync(importanceTheme.IdImportance, idTheme,
                         importanceTheme.BackgroundColor, importanceTheme.TextColor);
                 }
-                await _themeSetService.AddAsync(themeSetContract.Theme.Id, themeSetContract.IdUserCreator, themeSetContract.Public);
-                return Ok();
+                Guid id = await _themeSetService.AddAsync(idTheme, themeSetContract.IdUserCreator, themeSetContract.Public);
+                return Ok(id);
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException);
                 return BadRequest($"Error creating theme: {ex.Message}");
             }
         }
@@ -119,6 +132,7 @@ namespace GoalTrackerApp.Controllers
                 await _themeService.UpdateAsync(themeSetContract.Theme);
                 foreach (ImportanceThemeModel importanceTheme in themeSetContract.ImportanceThemes)
                 {
+                    if (importanceTheme == null) continue;
                     await _importanceThemeService.UpdateAsync(importanceTheme);
                 }
                 await _themeSetService.UpdateAsync(new ThemeSetModel(themeSetContract.Id, themeSetContract.Theme.Id,
