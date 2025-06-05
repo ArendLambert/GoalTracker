@@ -101,7 +101,7 @@ namespace EmailSender
 
                     message.To.Add(MailboxAddress.Parse(goal.IdUserNavigation.Email));
                     message.Subject = goal.Title;
-                    message.Body = new TextPart("html") { Text = $"<h2>Дедлайн прошел: {goal.Deadline}!</h2>" };
+                    message.Body = new TextPart("html") { Text = $"<h2>Дедлайн прошел: {goal.Deadline}! Возможно случится: {goal.Punishment}</h2>" };
 
                     using var client = new SmtpClient();
                     await client.ConnectAsync(_options.SMTP, _options.Port, MailKit.Security.SecureSocketOptions.SslOnConnect);

@@ -48,12 +48,11 @@
           <div class="placeholder">Здесь будут проекты.</div>
         </section>
 
-        <!-- Вкладка Настройки (Темы) -->
+        <!-- Вкладка Темы -->
         <section
           class="tab-section"
           :class="{ active: activeTab === 'settings' }"
         >
-          <!-- Вкладки внутри "Темы" -->
           <div class="settings-header">
             <div class="tab-nav">
               <button
@@ -71,7 +70,6 @@
                 Мои темы
               </button>
             </div>
-            <!-- Кнопка только для собственных тем -->
             <button
               v-if="themeTab === 'own'"
               class="add-theme-button"
@@ -80,7 +78,7 @@
               Создать новую тему
             </button>
           </div>
-          <!-- Поле поиска -->
+         
           <div class="search-bar">
             <input
               type="text"
@@ -150,14 +148,13 @@
           </div>
         </section>
 
-        <!-- Модальное окно создания/редактирования темы -->
+        
         <div v-if="showThemeModal" class="modal-overlay">
           <div class="modal modal-theme">
             <h3>
               {{ themeForm.id ? "Редактировать тему" : "Создать новую тему" }}
             </h3>
             <div class="theme-form">
-              <!-- Название темы -->
               <label>Название темы:</label>
               <input
                 type="text"
@@ -176,7 +173,6 @@
                 <label for="public"> Публичная тема</label>
               </div>
 
-              <!-- Основные цвета -->
               <!-- Основные цвета -->
               <div class="theme-form palitra">
                 <fieldset class="fieldset-colors">

@@ -34,7 +34,6 @@
       <main class="main-content">
         <!-- Вкладка Задачи -->
         <section class="tab-section" :class="{ active: activeTab === 'tasks' }">
-          <!-- Плашка фильтрации и поиска -->
           <div class="task-filters">
             <input
               v-model="searchQuery"
@@ -163,15 +162,12 @@
         >
           <div class="placeholder">Здесь будут проекты.</div>
         </section>
+>
 
-        <!-- Вкладка Настройки (Темы) -->
-
-        <!-- Модальное окно напоминаний -->
         <div v-if="showReminderModal" class="modal-overlay">
           <div class="modal modal-reminders">
             <h3>Напоминания для "{{ currentTask?.title }}"</h3>
 
-            <!-- Форма добавления напоминания -->
             <div class="reminder-form">
               <input type="datetime-local" v-model="newReminderDate" />
               <textarea
@@ -182,7 +178,6 @@
               <button @click="addReminder">Добавить</button>
             </div>
 
-            <!-- Список напоминаний -->
             <div
               class="reminder-list-container"
               v-if="currentTask.sendEmail.length > 0"
@@ -208,7 +203,6 @@
 
             <div v-else class="no-reminders">Нет напоминаний.</div>
             <p></p>
-            <!-- Кнопки действия -->
             <div class="modal-actions">
               <button @click="savesendEmail">Сохранить</button>
               <button @click="closeReminderModal">Закрыть</button>
@@ -216,7 +210,6 @@
           </div>
         </div>
 
-        <!-- Модальное окно создания/редактирования цели -->
         <div v-if="showGoalModal" class="modal-overlay">
           <div class="modal modal-goal">
             <h3>
@@ -224,7 +217,6 @@
             </h3>
 
             <div class="goal-form">
-              <!-- Название -->
               <label>Название:</label>
               <input
                 type="text"
@@ -233,7 +225,6 @@
                 class="input-field"
               />
 
-              <!-- Описание -->
               <label>Описание:</label>
               <textarea
                 v-model="goalForm.description"
@@ -241,7 +232,6 @@
                 class="textarea-field"
               ></textarea>
 
-              <!-- Статус -->
               <label>Статус:</label>
               <select v-model="goalForm.status" class="select-field">
                 <option value="">Выберите статус</option>
@@ -254,7 +244,6 @@
                 </option>
               </select>
 
-              <!-- Приоритет -->
               <label>Приоритет:</label>
               <select v-model="goalForm.important" class="select-field">
                 <option value="">Выберите приоритет</option>
@@ -267,7 +256,6 @@
                 </option>
               </select>
 
-              <!-- Наказание -->
               <label>Наказание:</label>
               <input
                 type="text"
@@ -276,7 +264,6 @@
                 class="input-field"
               />
 
-              <!-- Дедлайн -->
               <label>Дедлайн:</label>
               <input
                 type="datetime-local"
@@ -284,7 +271,6 @@
                 class="input-field"
               />
 
-              <!-- AutoImportance -->
               <div class="checkbox-container">
                 <input
                   type="checkbox"
@@ -296,7 +282,6 @@
             </div>
 
             <p></p>
-            <!-- Кнопки действия -->
             <div class="modal-actions">
               <button @click="saveGoal">
                 {{ goalForm.id ? "Сохранить изменения" : "Создать" }}
