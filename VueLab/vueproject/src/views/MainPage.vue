@@ -5,7 +5,7 @@
         <img
           src="D:\repos\GoalTracker\VueLab\vueproject\src\logo.png"
           alt="Logo"
-        />
+          />
         <div class="app-title">Goal Tracker</div>
       </div>
       <div class="user-info">
@@ -25,7 +25,7 @@
         <div
           class="nav-item"
           :class="{ active: activeTab === 'projects' }"
-          @click="activeTab = 'projects'"
+          @click="routToWheel"
         >
           Колесо
         </div>
@@ -162,7 +162,6 @@
         >
           <div class="placeholder">Здесь будут проекты.</div>
         </section>
->
 
         <div v-if="showReminderModal" class="modal-overlay">
           <div class="modal modal-reminders">
@@ -327,7 +326,7 @@ onMounted(async () => {
     toast.error("Пожалуйста, войдите в систему");
     return;
   }
-
+  
   try {
     await loadGoals();
     statuses.value = await fetchStatuses();
@@ -338,6 +337,7 @@ onMounted(async () => {
     console.error("Ошибка загрузки данных:", error);
     toast.error("Не удалось загрузить данные");
   }
+  // themeStore.loadThemeFromStorage();
 });
 
 async function loadGoals() {
@@ -675,7 +675,7 @@ const newReminderText = ref("");
 function showsendEmail(task) {
   currentTask.value = task;
   currentTask.value.idImportance = task.important; 
-  currentTask.value.idStatus = task.status; я
+  currentTask.value.idStatus = task.status;
   newReminderDate.value = "";
   newReminderText.value = "";
   showReminderModal.value = true;
@@ -779,5 +779,9 @@ const filteredTasks = computed(() => {
 
 function routToTheme() {
   router.push({ path: "/themestore" });
+}
+
+function routToWheel() {
+  router.push({ path: "/wheel" });
 }
 </script>

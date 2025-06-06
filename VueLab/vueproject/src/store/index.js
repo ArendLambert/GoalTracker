@@ -157,8 +157,8 @@ export const useThemeStore = defineStore("theme", {
         this.applyTheme();
         this.applyImportanceStyles();
 
-        sessionStorage.setItem("theme", JSON.stringify(this.theme));
-        sessionStorage.setItem(
+        localStorage.setItem("theme", JSON.stringify(this.theme));
+        localStorage.setItem(
           "importanceThemes",
           JSON.stringify(this.importanceThemes),
         );
@@ -170,8 +170,8 @@ export const useThemeStore = defineStore("theme", {
     },
 
     loadThemeFromStorage() {
-      const storedTheme = sessionStorage.getItem("theme");
-      const storedImportanceThemes = sessionStorage.getItem("importanceThemes");
+      const storedTheme = localStorage.getItem("theme");
+      const storedImportanceThemes = localStorage.getItem("importanceThemes");
 
       if (storedTheme) {
         this.theme = JSON.parse(storedTheme);

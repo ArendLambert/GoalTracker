@@ -91,6 +91,7 @@ namespace GoalTrackerApp.Controllers
                 {
                     sendEmails.Add(await _sendEmailService.GetByIdAsync(email.IdSendEmail));
                 }
+                sendEmails.RemoveAll(x => x.Sended);
                 goalContracts.Add(new GoalContract
                 {
                     Id = goal.Id,
@@ -127,7 +128,7 @@ namespace GoalTrackerApp.Controllers
                     else
                     {
                         TimeSpan difference = ((DateTime)goalContract.Deadline) - goalContract.StartDate;
-                        int duration = Math.Abs(difference.Days);
+                        int duration = (difference.Days);
                         ImportanceModel? importance = importances.FirstOrDefault(x =>
                         x.MinDays <= duration
                         && x.MaxDays >= duration);
@@ -191,7 +192,7 @@ namespace GoalTrackerApp.Controllers
                     else
                     {
                         TimeSpan difference = ((DateTime)goalContract.Deadline) - goalContract.StartDate;
-                        int duration = Math.Abs(difference.Days);
+                        int duration = (difference.Days);
                         ImportanceModel? importance = importances.FirstOrDefault(x =>
                         x.MinDays <= duration
                         && x.MaxDays >= duration);

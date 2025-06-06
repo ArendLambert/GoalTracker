@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     showRouterView() {
-      return !["/loginpage", "/registerpage", "/goals"].includes(
+      return !["/loginpage", "/registerpage", "/goals", "/themestore", "/wheel"].includes(
         this.$route.path,
       );
     },
@@ -122,5 +122,4 @@ button {
 button:hover {
   background-color: #0056b3;
 }
-/* TODO сделать зависимость стилей от глобальных + сделать шапку */
 </style>

@@ -2,8 +2,8 @@
   <div class="main-page">
     <header class="header">
       <div class="logo">
-        <img src="@\logo.png" alt="Logo" />
-        <div class="app-title">Goal Tracker</div>
+        <img src="@\logo.png" alt="Logo" @click="routToGoals"/>
+        <div class="app-title" @click="routToGoals">Goal Tracker</div>
       </div>
       <div class="user-info">
         <span>{{ email || "Пользователь" }}</span>
@@ -22,7 +22,7 @@
         <div
           class="nav-item"
           :class="{ active: activeTab === 'projects' }"
-          @click="activeTab = 'projects'"
+          @click="routToWheel"
         >
           Колесо
         </div>
@@ -342,6 +342,8 @@ import {
   fetchCreateTheme,
   fetchUpdateTheme,
   fetchDeleteTheme,
+  fetchUpdateUser,
+  fetchGetUserById 
 } from "@/services/api";
 
 const publicThemes = ref([]);
@@ -358,8 +360,10 @@ loadThemeSets();
 const themeTab = ref("public");
 
 function splitThemes() {
-  publicThemes.value = themeSets.value.filter((t) => t.public);
-  ownThemes.value = themeSets.value.filter((t) => !t.public);
+  console.log(authStore.idUser);
+  console.log(themeSets.value)
+  publicThemes.value = themeSets.value.filter((t) => t.public && t.idUserCreator !== authStore.idUser);
+  ownThemes.value = themeSets.value.filter((t) => t.idUserCreator === authStore.idUser);
 }
 function logout() {
   authStore.clearSessionStorage();
@@ -392,6 +396,15 @@ async function loadThemeSets() {
     const sets = await fetchThemes(authStore.idUser);
     console.log("Загруженные темы:", sets);
     themeSets.value = sets;
+    themeSets.value.importanceThemes = sets.map(theme => {
+      if(theme.importanceThemes.length > 0){
+        let copiedTheme = { ...theme };
+        console.log(theme.importanceThemes);
+        copiedTheme = sortImportanceThemes(theme.importanceThemes);
+        console.log(theme.importanceThemes);
+        return copiedTheme;
+      }
+    });
     splitThemes();
   } catch (err) {
     console.error("Ошибка загрузки тем:", err);
@@ -401,11 +414,13 @@ async function loadThemeSets() {
 
 function selectTheme(id) {
   themeStore.loadTheme(id);
+  updateUserTheme(id);
 }
 
 function openThemeModal() {
   themeForm.value = {
     id: null,
+    public: false,
     theme: {
       id: crypto.randomUUID(),
       name: "",
@@ -462,9 +477,11 @@ function openThemeModal() {
 }
 
 function editTheme(themeSet) {
+  console.log("ДЛЯ РЕДАКТИРОВАНИЯ", themeSet);
   themeForm.value = {
     id: themeSet.id,
     theme: { ...themeSet.theme },
+    public: themeSet.public,
     importanceThemes: themeSet.importanceThemes.map((imp) => ({
       idImportance: imp.idImportance,
       backgroundColor: imp.backgroundColor,
@@ -566,6 +583,7 @@ function confirmDeleteTheme(id) {
 
 async function deleteTheme(id) {
   try {
+    await updateUserTheme("5EC6627F-1F1B-47E6-8EBD-367BC345F702");
     await fetchDeleteTheme(authStore.idUser, id);
 
     ownThemes.value = ownThemes.value.filter((t) => t.id !== id);
@@ -590,6 +608,24 @@ function removeImportanceEntry(index) {
   themeForm.value.importanceThemes.splice(index, 1);
 }
 
+function sortImportanceThemes(importanceThemes) {
+  const order = {
+    "9b481ea3-322d-4b95-b5c3-5e4c0c4a6775": 0,
+    "9cf029f0-2353-4c2b-94ea-3deb6cd566a2": 1,
+    "a8f7de47-c2d7-4c4d-861d-a3b555b236d0": 2,
+    "b5ac2a85-4002-460e-ada2-447cf4b2c764": 3,
+    "5e760a5d-3750-4466-8489-e4dc3c47b231": 4
+  };
+
+  importanceThemes.sort((a, b) => {
+    const indexA = order[a.idImportance] ?? Number.MAX_VALUE;
+    const indexB = order[b.idImportance] ?? Number.MAX_VALUE;
+    return indexA - indexB;
+  });
+
+  return importanceThemes;
+}
+
 async function saveTheme() {
   if (!themeForm.value.theme.name) {
     message.error("Укажите название темы.");
@@ -608,37 +644,47 @@ async function saveTheme() {
   }
 
   try {
+    console.log("оригинальная тема:", themeForm.value);
     if (themeForm.value.id) {
       const updatedSet = {
         id: themeForm.value.id,
+        public: themeForm.value.public,
         idUser: authStore.idUser,
         theme: { ...themeForm.value.theme },
-        importanceThemes: [...themeForm.value.importanceThemes],
+        importanceThemes: sortImportanceThemes(themeForm.value.importanceThemes),
       };
+      // console.log(sortImportanceThemes(updatedSet.importanceThemes));
       console.log("Обновляем тему:", updatedSet);
-      console.log("оригинальная тема:", themeForm.value);
       await fetchUpdateTheme(updatedSet, authStore.idUser);
       await loadThemeSets();
       toast.success("Тема успешно обновлена");
       selectTheme(themeForm.value.id);
+      updateUserTheme(themeForm.value.id);
     } else {
       const toCreate = {
         id: crypto.randomUUID(),
+        public: themeForm.value.public,
         idUser: authStore.idUser,
         theme: { ...themeForm.value.theme },
-        importanceThemes: [...themeForm.value.importanceThemes],
+        importanceThemes: sortImportanceThemes(themeForm.value.importanceThemes),
       };
       const response = await fetchCreateTheme(toCreate, authStore.idUser);
       await loadThemeSets();
       toast.success("Тема успешно создана");
       console.log("Создана тема:", response);
       selectTheme(response);
+      updateUserTheme(response.id);
     }
     closeThemeModal();
   } catch (err) {
     console.error("Ошибка при сохранении темы:", err);
     toast.error("Не удалось сохранить тему");
   }
+}
+
+async function updateUserTheme(idTheme) {
+  const user = await fetchGetUserById(authStore.idUser);
+  await fetchUpdateUser(user.id, user.email, user.password, idTheme);
 }
 
 function closeThemeModal() {
@@ -665,6 +711,10 @@ function closeThemeModal() {
 
 function routToGoals() {
   router.push({ path: "/goals" });
+}
+
+function routToWheel() {
+  router.push({ path: "/wheel" });
 }
 
 function cloneTheme(themeSet) {

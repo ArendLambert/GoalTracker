@@ -154,7 +154,7 @@ button:hover {
 }
 
 .task-description {
-  word-break: break-all;     /* Переносит длинные слова */
+  word-break: break-word;     /* Переносит длинные слова */
   overflow-wrap: break-word;  /* Альтернативное свойство для совместимости */
   white-space: pre-wrap;      /* Сохраняет пробелы и переносы строк */
   overflow: auto;             /* Добавляет прокрутку при необходимости */
@@ -617,6 +617,42 @@ button:hover {
   resize: vertical;
 }
 
+.modal-theme::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-theme::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 4px;
+}
+
+.modal-theme::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.modal-theme::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.textarea-field::-webkit-scrollbar {
+  width: 8px;
+}
+
+.textarea-field::-webkit-scrollbar-track {
+  background: var(--color-background);
+  border-radius: 4px;
+}
+
+.textarea-field::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.textarea-field::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -842,4 +878,68 @@ button:hover {
 .tab-button.active {
   background-color: var(--color-accent);
   color: var(--color-button-text);
+}
+
+.wheel-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#wheel {
+  border: 5px solid #333;
+  border-radius: 50%;
+}
+
+#spin-btn {
+  /* margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer; */
+   background-color: var(--color-button);
+  color: var(--color-button-text);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+
+#spin-btn:hover {
+  background-color: var(--color-accent);
+}
+
+.tasks-list {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  padding: 10px;
+  background: var(--color-background-soft);
+  color: var(--color-text);
+  border-radius: 6px;
+}
+
+.tasks-title{
+  color: var(--color-text);
+}
+
+.task-item {
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.task-item label {
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  gap: 8px;
+}
+
+#result {
+  font-size: 20px;
+  color: var(--color-text);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
 }

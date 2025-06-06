@@ -53,7 +53,7 @@ export const fetchUpdateTheme = async (theme, idUser) => {
       importanceThemes: theme.importanceThemes,
       id: theme.id,
       theme: theme.theme,
-      public: false,
+      public: theme.public,
       requestUserId: idUser,
     };
     console.log("Обновление темы:", themeData);
@@ -215,7 +215,10 @@ export const fetchCreateGoal = async (goal) => {
     // if(goal.idImportance = 'null') {
     //   goal.idImportance = null;
     // }
-    console.log("Добавление цели:", goal);
+    if(goal.AutoImportance){
+      goal.idImportance = null;
+    }
+        console.log("Добавление цели:", goal);
     const response = await apiClient.post("/Goal/add", goal, {});
 
     return response.data;

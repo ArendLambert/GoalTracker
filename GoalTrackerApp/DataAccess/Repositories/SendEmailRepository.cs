@@ -53,7 +53,7 @@ namespace DataAccess.Repositories
             {
                 return null;
             }
-            return new SendEmailModel(sendEmail.Id, sendEmail.Date, sendEmail.Message, false);
+            return new SendEmailModel(sendEmail.Id, sendEmail.Date, sendEmail.Message, sendEmail.Sended);
         }
 
         public async Task UpdateAsync(SendEmailModel entity)

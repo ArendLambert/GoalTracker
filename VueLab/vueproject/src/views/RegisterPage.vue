@@ -78,14 +78,14 @@ export default {
           await themeStore.loadTheme("5EC6627F-1F1B-47E6-8EBD-367BC345F702");
           router.push({ path: "/goals" });
         } else {
-          alert("Ошибка: токен не получен");
+          toast.error("Ошибка: токен не получен");
         }
       } catch (error) {
         console.error(
           "Ошибка регистрации:",
           error.response?.data || error.message,
         );
-        alert("Ошибка при создании аккаунта. Проверьте данные.");
+        toast.error("Ошибка: токен не получен");
       } finally {
         this.isLoading = false;
       }

@@ -83,7 +83,7 @@ export default {
           } else {
             await themeStore.loadTheme("5EC6627F-1F1B-47E6-8EBD-367BC345F702");
           }
-          toast.success("Вы успешно вошли!");
+          // toast.success("Вы успешно вошли!");
           router.push({ path: "/goals" });
         } else {
           toast.error("Ошибка: токен не получен");
